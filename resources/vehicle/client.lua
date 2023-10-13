@@ -1,8 +1,7 @@
-local nui        = import '@hud/nui';
-local vehicle    = import '@hud/vehicle';
+local nui        = import 'nui';
+local vehicle    = import 'vehicle';
 local player     = import '@Index/player';
-local behavior   = player.behavior();
-local player     = player.localPlayer()
+local behavior   = import '@Index/behavior';
 
 local directions = { N = 360, 0, NE = 315, E = 270, SE = 225, S = 180, SW = 135, W = 90, NW = 45, }
 local seatbelt   = player.getState('seatbelt')

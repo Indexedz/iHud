@@ -1,5 +1,5 @@
 local array    = import '@Index/array';
-local nui      = import '@hud/nui';
+local nui      = import 'nui';
 
 local status   = array.new();
 local requests = array.new();

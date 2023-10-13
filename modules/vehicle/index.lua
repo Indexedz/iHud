@@ -1,6 +1,6 @@
 local module   = {}
-local nui      = import '@hud/nui';
-local player   = import '@Index/player'.localPlayer();
+local player   = import '@Index/player';
+local nui      = import 'nui';
 
 local visible  = false
 

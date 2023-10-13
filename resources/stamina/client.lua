@@ -1,6 +1,5 @@
 local player   = import '@Index/player';
-local behavior = player.behavior();
-local player   = player.localPlayer();
+local behavior = import '@Index/behavior';
 local state    = player.getState("stamina");
 local maxState = player.getState("max:stamina")
 
@@ -14,11 +13,11 @@ local config   = {
   }
 }
 
-local status   = import '@hud/status'.new(config.name, config.value, config.icon, config.styles, false);
+local status   = import 'status'.new(config.name, config.value, config.icon, config.styles, false);
 local inWater  = false;
 local maxVal   = maxState.get();
 
-maxState.onChange(function (val)
+maxState.onChange(function(val)
   maxVal = val
 end)
 

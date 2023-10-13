@@ -1,8 +1,7 @@
 local array        = import '@Index/array'
-local player       = import '@Index/player'.localPlayer();
-
-local statusModule = import '@status/status';
-local statusHud    = import '@hud/status';
+local player       = import '@Index/player';
+local statusModule = import '@iStatus/status';
+local statusHud    = import 'status';
 local statuses     = array.new()
 
 local onUpdate     = function(status, val, max)

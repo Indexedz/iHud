@@ -1,6 +1,5 @@
 local player   = import '@Index/player';
-local behavior = player.behavior();
-local player   = player.localPlayer();
+local behavior = import '@Index/behavior';
 local state    = player.getState("oxygen")
 local maxState = player.getState("max:oxygen")
 local config   = {
@@ -13,7 +12,7 @@ local config   = {
     }
 }
 
-local status   = import '@hud/status'.new(config.name, config.value, config.icon, config.styles, config.visible);
+local status   = import 'status'.new(config.name, config.value, config.icon, config.styles, config.visible);
 local inWater  = false;
 behavior.on("InWater", function()
     status.setVisibility(true)

@@ -1,4 +1,4 @@
-local state = import '@Index/player'.localPlayer().getState("death");
+local state = import '@Index/player'.getState("death");
 local config = {
     name    = "death",
     visible = false,
@@ -9,7 +9,7 @@ local config = {
     }
 }
 
-local status = import '@hud/status'.new(config.name, config.value, config.icon, config.styles, config.visible);
+local status = import 'status'.new(config.name, config.value, config.icon, config.styles, config.visible);
 
 state.onChange(function (val)
     local visiblity = val >= 1 and true or false;

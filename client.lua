@@ -1,6 +1,6 @@
-local player    = import '@Index/player'.localPlayer();
-local event     = import '@Index/event';
-local status    = import '@hud/status';
+local player   = import '@Index/player';
+local event    = import '@Index/event';
+local status   = import 'status';
 
 local invState = player.getState("InventoryState");
 local function onPlayerLoaded()

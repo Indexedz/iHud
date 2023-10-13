@@ -1,4 +1,4 @@
-local state = import '@Index/player'.localPlayer().getState("health");
+local state = import '@Index/player'.getState("health");
 local config = {
   name    = "health",
   visible = true,
@@ -9,7 +9,7 @@ local config = {
   }
 }
 
-local status = import '@hud/status'.new(config.name, config.value, config.icon, config.styles, config.visible);
+local status = import 'status'.new(config.name, config.value, config.icon, config.styles, config.visible);
 state.onChange(function(val)
   status:set(val-100)
 end)
